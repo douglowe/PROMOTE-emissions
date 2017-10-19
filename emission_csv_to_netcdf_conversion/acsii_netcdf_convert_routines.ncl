@@ -182,7 +182,7 @@ begin
 	Data_Var = new((/nlat,nlon/),float,-9999)
 	Data_Var!0 = "lat"
 	Data_Var!1 = "lon"
-	Data_Var@units = "kg/m2/s"
+	Data_Var@units = "kg m-2 s-1"
 	
 	;;;; define the file settings
 	setfileoption(OUTFILE,"DefineMode",True)
