@@ -3,47 +3,66 @@
 ;
 ;
 undef("read_all_input_data")
-function read_all_input_data(ncols:numeric,nsecs:numeric,input_path:string,input_head:string,\
-								input_tail:string,input_sectors:string)
-local start, datatype, head_length, ii, filename, \
-		data_table, ndims, nrows, nrows_start, entire_data_table
+function read_all_input_data(ncols:numeric,nsecs:numeric,input_path:string,input_file:string,\
+								input_sectors:string,input_var_names:string)
+local start, datatype, head_length, front, filename, data_head, ncol_data, \
+		data_table, ndims, nrows, entire_data_table, vname, vind, ii, jj
 begin
 
 	start = True
 	datatype = "float" ; define what type of data we're loading
 	head_length = 1    ; define how many header lines in each file
+	front = "UNIQUE_"
+
+	; set file name to read
+	filename = input_path + input_file
+	
+	; read the header, and split by ","
+	data_head = readAsciiHead(filename,head_length)
+	data_head := str_split(data_head, ",")
+	; add front end to strings, for uniqueness checking later
+	data_head := front + data_head
+	
+	; get the number of data columns using heading data
+	ncol_data = dimsizes(data_head)
+	
+	; read raw data file
+	data_table = readAsciiTable(filename,ncol_data,datatype,head_length)
+
+	; obtain the number of rows in the dataset
+	ndims = dimsizes(data_table)
+	nrows = ndims(0)	
+
+	; create our data array (# sectors, # rows, #(Lat Lon Var1 Var2 etc) )
+	entire_data_table = new((/nsecs,nrows,ncols/),float,-9999.0)
+
+	; determine latitude & longitude pointers
+	lat_ind = str_match_ind_ic(data_head,"lat")
+	lon_ind = str_match_ind_ic(data_head,"long")
+
 
 	; loop through the input sectors
 	do ii = 0,nsecs-1
-
-		filename = input_path + input_head + input_sectors(ii) + input_tail
-
-		; read raw data file
-		data_table := readAsciiTable(filename,ncols,datatype,head_length)
 	
-		; obtain the number of rows
-		ndims = dimsizes(data_table)
-		nrows = ndims(0)	
+		; copy longitude data
+		entire_data_table(ii,:,0) = data_table(:,lon_ind)		
+		; copy latitude data
+		entire_data_table(ii,:,1) = data_table(:,lat_ind)		
 
+	
+		; loop through the emission variables
+		do jj = 0,ncols-3
 
-		; with the first data file, create the data array, otherwise check dimensions are consistent
-		if(start)
-			entire_data_table = new((/nsecs,nrows,ncols/),float,-9999.0)
-			nrows_start = nrows
-			start = False
-		else
-			if(nrows.ne.nrows_start)
-				print("mismatch in input file lengths, stopping script")
-				print("length of "+input_sectors(0)+" data is "+nrows_start)
-				print("length of "+input_sectors(ii)+" data is "+nrows)
-				exit()
-			end if
-		end if
+			; construct variable / sector name, using the front end info, and get index
+			vname = front + input_var_names(jj)+"_"+input_sectors(ii)
+			vind  := str_match_ind_ic(data_head,vname)
 	
-		; copy model data into data array
-		entire_data_table(ii,:,:) = data_table	
+			; copy model data into data array
+			entire_data_table(ii,:,jj+2) = data_table(:,vind)
 	
-	end do ; ii=0,dimsizes(input_sectors)-1
+		end do ; jj=0,ncols-1
+
+	end do ; ii=0,nsecs-1
 
 
 	return(entire_data_table)
