@@ -57,8 +57,15 @@ begin
 			vname = front + input_var_names(jj)+"_"+input_sectors(ii)
 			vind  := str_match_ind_ic(data_head,vname)
 	
-			; copy model data into data array
-			entire_data_table(ii,:,jj+2) = data_table(:,vind)
+			; check that the variable/sector exists (i.e. vind is real), if not then
+			;   set the data for this sector to zero
+			if(.not. any(ismissing(vind)))	
+				; copy model data into data array
+				entire_data_table(ii,:,jj+2) = data_table(:,vind)
+			else
+				print("no data for "+vname+" exists - setting this to zero")
+				entire_data_table(ii,:,jj+2) = 0.0
+			end if
 	
 		end do ; jj=0,ncols-1
 
