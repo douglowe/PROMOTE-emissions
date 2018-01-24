@@ -120,9 +120,9 @@ lat_output = create_latlon_array(entire_data_table,1)
 nlon = dimsizes(lon_output)
 nlat = dimsizes(lat_output)
 
-;;; create grid of conversion factors, from Gg/Yr/grid to kg/m2/s
-;convert_grid = conversion_tyrgrid_to_kgm2s_calc(lon_output,lat_output)
-convert_grid = conversion_Ggyrgrid_to_kgm2s_calc(lon_output,lat_output)
+;;; create grid of conversion factors, from Ton/Yr/grid to kg/m2/s    ;;;;;;;; CHECK THAT THIS IS THE UNITS OF YOUR DATA
+convert_grid = conversion_tyrgrid_to_kgm2s_calc(lon_output,lat_output)
+;convert_grid = conversion_Ggyrgrid_to_kgm2s_calc(lon_output,lat_output)
 
 
 

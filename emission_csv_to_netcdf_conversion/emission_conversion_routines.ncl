@@ -4,7 +4,7 @@
 ;
 ;  Long / Lat arrays must define the lower left corner of the grid cell
 ;
-;  Conversion is from Tonnes per yer per grid cell to kg per m^2 per second
+;  Conversion is from Gg per yer per grid cell to kg per m^2 per second
 ;
 undef("conversion_Ggyrgrid_to_kgm2s_calc")
 function conversion_Ggyrgrid_to_kgm2s_calc(longitude:numeric,latitude:numeric)
