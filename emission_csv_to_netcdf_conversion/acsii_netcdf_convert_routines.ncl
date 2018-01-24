@@ -102,6 +102,31 @@ begin
 
 end
 
+;
+;  Function for increasing a 1D data array by 1 at each end, and then
+;    adding an extra data point (with the same step size as adjacent data)
+;
+undef("increase_latlon_array_byone")
+function increase_latlon_array_byone(array_temp:numeric)
+local array_output, narray
+begin
+
+	;;; increase array size by 2
+	array_output = new(dimsizes(array_temp)+2,typeof(array_temp),-9999.)
+
+	;;; determine the number of data points
+	narray = dimsizes(array_output)
+
+	;;; save the data in the new data array
+	array_output(1:narray-2) = array_temp
+	;;; create the extra datapoints, assuming we've got a regular grid
+	array_output(0) = array_output(1) + (array_output(1) - array_output(2))
+	array_output(narray-1) = array_output(narray-2) + (array_output(narray-2) - array_output(narray-3))
+
+	return(array_output)
+
+end
+
 
 ;
 ;  Function for creating a 3-D array of sector on the lat / lon grid
@@ -119,6 +144,9 @@ begin
 
 	; create output data array
 	data_table = new((/nsecs,nlat,nlon/),float,-9999.)
+	
+	; set the background emissions to zero
+	data_table = 0.0
 	
 	; loop through the rows in the input array
 	do ii = 0,nrows-1

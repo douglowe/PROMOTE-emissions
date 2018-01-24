@@ -113,12 +113,17 @@ delete(ndims)
 print("== Creating the Lat/Lon grids from input information ==")
 ;;; create the "lat" and "lon" variables, which will define the data grid
 ;;;    this process simply sorts all unique values into ascending order
-lon_output = create_latlon_array(entire_data_table,0)
-lat_output = create_latlon_array(entire_data_table,1)
+lon_temp = create_latlon_array(entire_data_table,0)
+lat_temp = create_latlon_array(entire_data_table,1)
+
+;;; create larger arrays (so we can have a 1 cell wide empty border around the data) 
+lon_output = increase_latlon_array_byone(lon_temp)
+lat_output = increase_latlon_array_byone(lat_temp)
 
 ;;; determine the number of longitude and latitude data points
 nlon = dimsizes(lon_output)
 nlat = dimsizes(lat_output)
+
 
 ;;; create grid of conversion factors, from Ton/Yr/grid to kg/m2/s    ;;;;;;;; CHECK THAT THIS IS THE UNITS OF YOUR DATA
 convert_grid = conversion_tyrgrid_to_kgm2s_calc(lon_output,lat_output)
@@ -137,7 +142,7 @@ do vari = 0, dimsizes(output_var_names)-1
 	;;; create the output data tables - these will be 3 dimensional (nsectors, nlat, lon)
 	data_table := create_table(lon_output,lat_output,nsecs,ncols,nrows,nlon,nlat,entire_data_table,var_point)
 
-	;;; convert the emission variable from T/yr/grid to kg/m2/s
+	;;; convert the emission variable from original units to kg/m2/s
 	do seci = 0,nsecs-1
 		data_table(seci,:,:) = data_table(seci,:,:)*convert_grid
 	end do
