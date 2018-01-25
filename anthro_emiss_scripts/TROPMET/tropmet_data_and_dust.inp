@@ -1,0 +1,74 @@
+
+&CONTROL
+ anthro_dir = './input_data/2015_data'
+ wrf_dir = './'
+ src_file_prefix = 'SAFAR_'
+ domains = 4
+ src_file_suffix = '_2015.nc' 
+ src_names = 
+ 		'CO(28)','NOX(30)','SO2(64)','NMVOC(1)','BC(1)','OC(1)','PM2_5(1)','PM10(1)'
+
+ ! Note NMVOC is set to mol weight of 1 - > will give emissions in "g"/km^2/hr.
+ ! When splitting into subspecies, must divide by molecular weight to give mol emissions.
+ 
+ sub_categories  = 'ind',
+                   'pow',
+                   'res',
+                   'tra',
+                   'wbd'
+
+ cat_var_prefix  = ' '
+ serial_output   = .false.
+ start_output_time = '2015-07-10_00:00:00'
+ stop_output_time = '2015-07-14_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'CO_ANT_TRA->CO(tra)','CO_ANT_IND->CO(ind)','CO_ANT_RES->CO(res)','CO_ANT_POW->CO(pow)',
+ 
+            'NOx_ANT_TRA->NOX(tra)','NOx_ANT_IND->NOX(ind)','NOx_ANT_RES->NOX(res)','NOx_ANT_POW->NOX(pow)',
+            
+            'SO2_ANT_TRA->SO2(tra)','SO2_ANT_IND->SO2(ind)','SO2_ANT_RES->SO2(res)','SO2_ANT_POW->SO2(pow)',
+            
+            'NMVOC_ANT_TRA->NMVOC(tra)','NMVOC_ANT_IND->NMVOC(ind)','NMVOC_ANT_RES->NMVOC(res)','NMVOC_ANT_POW->NMVOC(pow)',
+            
+            'BC_ANT_TRA(a)->BC(tra)','BC_ANT_IND(a)->BC(ind)','BC_ANT_RES(a)->BC(res)','BC_ANT_POW(a)->BC(pow)',
+            'BC_ANT_WBD(a)->BC(wbd)',
+            
+            'OC_ANT_TRA(a)->OC(tra)','OC_ANT_IND(a)->OC(ind)','OC_ANT_RES(a)->OC(res)','OC_ANT_POW(a)->OC(pow)',
+            'OC_ANT_WBD(a)->OC(wbd)',
+            
+            'NH3_ANT_AGR-> 0.0*CO(tra)',
+            
+             'PM2_5_ANT_TRA(a)->PM2_5(tra)',
+             'PM2_5_ANT_IND(a)->PM2_5(ind)',
+             'PM2_5_ANT_RES(a)->PM2_5(res)',
+             'PM2_5_ANT_POW(a)->PM2_5(pow)',
+             'PM2_5_ANT_WBD(a)->PM2_5(wbd)',
+
+             'PM2_5_OIN_ANT_TRA(a)->PM2_5(tra) + -1.0*OC(tra) + -1.0*BC(tra)',
+             'PM2_5_OIN_ANT_IND(a)->PM2_5(ind) + -1.0*OC(ind) + -1.0*BC(ind)',
+             'PM2_5_OIN_ANT_RES(a)->PM2_5(res) + -1.0*OC(res) + -1.0*BC(res)',
+             'PM2_5_OIN_ANT_POW(a)->PM2_5(pow) + -1.0*OC(pow) + -1.0*BC(pow)',
+			 'PM2_5_OIN_ANT_WBD(a)->PM2_5(wbd)',
+
+
+              'PM10_ANT_TRA(a)->PM10(tra)',
+              'PM10_ANT_IND(a)->PM10(ind)',
+              'PM10_ANT_RES(a)->PM10(res)',
+              'PM10_ANT_POW(a)->PM10(pow)',
+              'PM10_ANT_WBD(a)->PM10(wbd)',
+              
+              'PM10_REM_ANT_TRA(a)->PM10(tra) + -1.0*PM2_5(tra)',
+              'PM10_REM_ANT_IND(a)->PM10(ind) + -1.0*PM2_5(ind)',
+              'PM10_REM_ANT_RES(a)->PM10(res) + -1.0*PM2_5(res)',
+              'PM10_REM_ANT_POW(a)->PM10(pow) + -1.0*PM2_5(pow)',
+              'PM10_REM_ANT_WBD(a)->PM10(wbd) + -1.0*PM2_5(wbd)',
+
+              'PM10_OIN_ANT_TRA(a)->PM10(tra) + -1.0*OC(tra) + -1.0*BC(tra)',
+              'PM10_OIN_ANT_IND(a)->PM10(ind) + -1.0*OC(ind) + -1.0*BC(ind)',
+              'PM10_OIN_ANT_RES(a)->PM10(res) + -1.0*OC(res) + -1.0*BC(res)',
+              'PM10_OIN_ANT_POW(a)->PM10(pow) + -1.0*OC(pow) + -1.0*BC(pow)',
+              'PM10_OIN_ANT_WBD(a)->PM10(wbd)',
+
+
+/

@@ -1,0 +1,76 @@
+
+&CONTROL
+ anthro_dir = './input_data/%%BB%%'
+ wrf_dir = './'
+ src_file_prefix = 'edgar_HTAP_'
+ domains = 4
+ src_file_suffix = '_2010_%%AA%%.0.1x0.1.nc' 
+ src_names = 
+ 		'CO_emi_INDUSTRY(28)','NOx_emi_INDUSTRY(30)','SO2_emi_INDUSTRY(64)','NH3_emi_INDUSTRY(17)',
+ 		'NMVOC_emi_INDUSTRY(1)','BC_emi_INDUSTRY(1)','OC_emi_INDUSTRY(1)','PM2.5_emi_INDUSTRY(1)','PM10_emi_INDUSTRY(1)',
+ 		'CO_emi_TRANSPORT(28)','NOx_emi_TRANSPORT(30)','SO2_emi_TRANSPORT(64)','NH3_emi_TRANSPORT(17)',
+ 		'NMVOC_emi_TRANSPORT(1)','BC_emi_TRANSPORT(1)','OC_emi_TRANSPORT(1)','PM2.5_emi_TRANSPORT(1)','PM10_emi_TRANSPORT(1)',
+ 		'CO_emi_ENERGY(28)','NOx_emi_ENERGY(30)','SO2_emi_ENERGY(64)','NH3_emi_ENERGY(17)',
+ 		'NMVOC_emi_ENERGY(1)','BC_emi_ENERGY(1)','OC_emi_ENERGY(1)','PM2.5_emi_ENERGY(1)','PM10_emi_ENERGY(1)',
+ 		'CO_emi_RESIDENTIAL(28)','NOx_emi_RESIDENTIAL(30)','SO2_emi_RESIDENTIAL(64)','NH3_emi_RESIDENTIAL(17)',
+ 		'NMVOC_emi_RESIDENTIAL(1)','BC_emi_RESIDENTIAL(1)','OC_emi_RESIDENTIAL(1)','PM2.5_emi_RESIDENTIAL(1)','PM10_emi_RESIDENTIAL(1)',
+ 		'NH3_emi_AGRICULTURE(17)',
+  		'CO_emi_SHIPS(28)','NOx_emi_SHIPS(30)','SO2_emi_SHIPS(64)',
+ 		'NMVOC_emi_SHIPS(1)','BC_emi_SHIPS(1)','OC_emi_SHIPS(1)','PM2.5_emi_SHIPS(1)','PM10_emi_SHIPS(1)'
+
+ ! Note NMVOC is set to mol weight of 1 - > will give emissions in "g"/km^2/hr.
+ ! When splitting into subspecies, must divide by molecular weight to give mol emissions.
+ 
+ sub_categories  = 'emi_co',
+                   'emi_nox',
+                   'emi_so2',
+                   'emi_nh3',
+                   'emi_nmvoc',
+                   'emi_bc',
+                   'emi_oc',
+                   'emi_pm2.5',
+                   'emi_pm10'
+
+ cat_var_prefix  = ' '
+ serial_output   = .false.
+ start_output_time = '2015-01-01_00:00:00'
+ stop_output_time = '2015-07-14_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'CO_ANT_TRA->CO_emi_TRANSPORT(emi_co)','CO_ANT_IND->CO_emi_INDUSTRY(emi_co)',
+ 'CO_ANT_RES->CO_emi_RESIDENTIAL(emi_co)','CO_ANT_POW->CO_emi_ENERGY(emi_co)','CO_ANT_SHP->CO_emi_SHIPS(emi_co)',
+ 
+            'NOx_ANT_TRA->NOx_emi_TRANSPORT(emi_nox)','NOx_ANT_IND->NOx_emi_INDUSTRY(emi_nox)',
+ 'NOx_ANT_RES->NOx_emi_RESIDENTIAL(emi_nox)','NOx_ANT_POW->NOx_emi_ENERGY(emi_nox)','NOx_ANT_SHP->NOx_emi_SHIPS(emi_nox)',
+ 
+            'SO2_ANT_TRA->SO2_emi_TRANSPORT(emi_so2)','SO2_ANT_IND->SO2_emi_INDUSTRY(emi_so2)',
+ 'SO2_ANT_RES->SO2_emi_RESIDENTIAL(emi_so2)','SO2_ANT_POW->SO2_emi_ENERGY(emi_so2)','SO2_ANT_SHP->SO2_emi_SHIPS(emi_so2)',
+ 
+            'NH3_ANT_TRA->NH3_emi_TRANSPORT(emi_nh3)','NH3_ANT_IND->NH3_emi_INDUSTRY(emi_nh3)',
+ 'NH3_ANT_RES->NH3_emi_RESIDENTIAL(emi_nh3)', 'NH3_ANT_AGR->NH3_emi_AGRICULTURE(emi_nh3)',  
+ 
+            'NMVOC_ANT_TRA->NMVOC_emi_TRANSPORT(emi_nmvoc)','NMVOC_ANT_IND->NMVOC_emi_INDUSTRY(emi_nmvoc)',
+ 'NMVOC_ANT_RES->NMVOC_emi_RESIDENTIAL(emi_nmvoc)','NMVOC_ANT_POW->NMVOC_emi_ENERGY(emi_nmvoc)','NMVOC_ANT_SHP->NMVOC_emi_SHIPS(emi_nmvoc)',
+ 
+            'BC_ANT_TRA(a)->BC_emi_TRANSPORT(emi_bc)','BC_ANT_IND(a)->BC_emi_INDUSTRY(emi_bc)', 
+'BC_ANT_RES(a)->BC_emi_RESIDENTIAL(emi_bc)','BC_ANT_POW(a)->BC_emi_ENERGY(emi_bc)','BC_ANT_SHP(a)->BC_emi_SHIPS(emi_bc)',
+
+! Multiply OC by 1.4 to give total organic aerosol emissions
+! update: removing the 1.4 factor stop stop adition of aerosol mass
+            'OC_ANT_TRA(a)->1.0*OC_emi_TRANSPORT(emi_oc)','OC_ANT_IND(a)->1.0*OC_emi_INDUSTRY(emi_oc)',
+ 'OC_ANT_RES(a)->1.0*OC_emi_RESIDENTIAL(emi_oc)','OC_ANT_POW(a)->1.0*OC_emi_ENERGY(emi_oc)','OC_ANT_SHP(a)->1.0*OC_emi_SHIPS(emi_oc)',
+ 
+ ! Change PM2.5 emissions to FM OIN emissions (OIN2.5 = PM2.5 - Org - BC)
+             'PM2_5_ANT_TRA(a)->PM2.5_emi_TRANSPORT(emi_pm2.5)',
+             'PM2_5_ANT_IND(a)->PM2.5_emi_INDUSTRY(emi_pm2.5)',
+             'PM2_5_ANT_RES(a)->PM2.5_emi_RESIDENTIAL(emi_pm2.5)',
+             'PM2_5_ANT_POW(a)->PM2.5_emi_ENERGY(emi_pm2.5)',
+             'PM2_5_ANT_SHP(a)->PM2.5_emi_SHIPS(emi_pm2.5)',
+ 
+! Change PM10 emissions to CM OIN emissions (OIN_cm = PM10 - PM2.5)
+              'PM10_ANT_TRA(a)->PM10_emi_TRANSPORT(emi_pm10)',
+              'PM10_ANT_IND(a)->PM10_emi_INDUSTRY(emi_pm10)',
+              'PM10_ANT_RES(a)->PM10_emi_RESIDENTIAL(emi_pm10)',
+              'PM10_ANT_POW(a)->PM10_emi_ENERGY(emi_pm10)',
+              'PM10_ANT_SHP(a)->PM10_emi_SHIPS(emi_pm10)',
+/
