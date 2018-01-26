@@ -1,0 +1,62 @@
+
+&CONTROL
+ anthro_dir = './input_data/%%BB%%'
+ wrf_dir = './'
+ src_file_prefix = 'v432_VOC_spec_'
+ domains = 4
+ src_file_suffix = '_2010_%%AA%%_IPCC_1A4.0.1x0.1.nc' 
+ src_names = 
+ 		'voc1(1)','voc2(1)','voc3(1)','voc4(1)','voc5(1)',
+ 		'voc6(1)','voc7(1)','voc8(1)','voc9(1)','voc10(1)',
+ 		'voc11(1)','voc12(1)','voc13(1)','voc14(1)','voc15(1)',
+ 		'voc16(1)','voc17(1)','voc18(1)','voc19(1)','voc20(1)',
+ 		'voc21(1)','voc22(1)','voc23(1)','voc24(1)','voc25(1)',
+
+
+ 
+ sub_categories  = 'emi_voc1',
+                   'emi_voc2',
+                   'emi_voc3',
+                   'emi_voc4',
+                   'emi_voc5',
+                   'emi_voc6',
+                   'emi_voc7',
+                   'emi_voc8',
+                   'emi_voc9',
+                   'emi_voc10',
+                   'emi_voc11',
+                   'emi_voc12',
+                   'emi_voc13',
+                   'emi_voc14',
+                   'emi_voc15',
+                   'emi_voc16',
+                   'emi_voc17',
+                   'emi_voc18',
+                   'emi_voc19',
+                   'emi_voc20',
+                   'emi_voc21',
+                   'emi_voc22',
+                   'emi_voc23',
+                   'emi_voc24',
+                   'emi_voc25',
+
+ cat_var_prefix  = ' '
+ serial_output   = .false.
+ start_output_time = '2015-07-10_00:00:00'
+ stop_output_time = '2015-07-14_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'VOC01_RCO->voc1(emi_voc1)','VOC02_RCO->voc2(emi_voc2)',
+			'VOC03_RCO->voc3(emi_voc3)','VOC04_RCO->voc4(emi_voc4)',
+			'VOC05_RCO->voc5(emi_voc5)','VOC06_RCO->voc6(emi_voc6)',
+			'VOC07_RCO->voc7(emi_voc7)','VOC08_RCO->voc8(emi_voc8)',
+			'VOC09_RCO->voc9(emi_voc9)','VOC10_RCO->voc10(emi_voc10)',
+			'VOC11_RCO->voc11(emi_voc11)','VOC12_RCO->voc12(emi_voc12)',
+			'VOC13_RCO->voc13(emi_voc13)','VOC14_RCO->voc14(emi_voc14)',
+			'VOC15_RCO->voc15(emi_voc15)','VOC16_RCO->voc16(emi_voc16)',
+			'VOC17_RCO->voc17(emi_voc17)','VOC18_RCO->voc18(emi_voc18)',
+			'VOC19_RCO->voc19(emi_voc19)','VOC20_RCO->voc20(emi_voc20)',
+			'VOC21_RCO->voc21(emi_voc21)','VOC22_RCO->voc22(emi_voc22)',
+			'VOC23_RCO->voc23(emi_voc23)','VOC24_RCO->voc24(emi_voc24)',
+			'VOC25_RCO->voc25(emi_voc25)',
+/

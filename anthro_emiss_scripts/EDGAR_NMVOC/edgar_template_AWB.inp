@@ -1,0 +1,62 @@
+
+&CONTROL
+ anthro_dir = './input_data/%%BB%%'
+ wrf_dir = './'
+ src_file_prefix = 'v432_VOC_spec_'
+ domains = 4
+ src_file_suffix = '_2010_%%AA%%_IPCC_4F.0.1x0.1.nc' 
+ src_names = 
+ 		'voc2(1)','voc3(1)','voc4(1)','voc5(1)',
+ 		'voc6(1)','voc7(1)','voc8(1)','voc9(1)','voc10(1)',
+ 		'voc11(1)','voc12(1)','voc13(1)','voc14(1)','voc15(1)',
+ 		'voc16(1)','voc17(1)','voc19(1)',
+ 		'voc21(1)','voc22(1)','voc23(1)','voc25(1)',
+
+
+ 
+ sub_categories  = 'emi_voc1',
+                   'emi_voc2',
+                   'emi_voc3',
+                   'emi_voc4',
+                   'emi_voc5',
+                   'emi_voc6',
+                   'emi_voc7',
+                   'emi_voc8',
+                   'emi_voc9',
+                   'emi_voc10',
+                   'emi_voc11',
+                   'emi_voc12',
+                   'emi_voc13',
+                   'emi_voc14',
+                   'emi_voc15',
+                   'emi_voc16',
+                   'emi_voc17',
+                   'emi_voc18',
+                   'emi_voc19',
+                   'emi_voc20',
+                   'emi_voc21',
+                   'emi_voc22',
+                   'emi_voc23',
+                   'emi_voc24',
+                   'emi_voc25',
+
+ cat_var_prefix  = ' '
+ serial_output   = .false.
+ start_output_time = '2015-07-10_00:00:00'
+ stop_output_time = '2015-07-14_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'VOC02_AWB->voc2(emi_voc2)',
+			'VOC03_AWB->voc3(emi_voc3)','VOC04_AWB->voc4(emi_voc4)',
+			'VOC05_AWB->voc5(emi_voc5)','VOC06_AWB->voc6(emi_voc6)',
+			'VOC07_AWB->voc7(emi_voc7)','VOC08_AWB->voc8(emi_voc8)',
+			'VOC09_AWB->voc9(emi_voc9)','VOC10_AWB->voc10(emi_voc10)',
+			'VOC11_AWB->voc11(emi_voc11)','VOC12_AWB->voc12(emi_voc12)',
+			'VOC13_AWB->voc13(emi_voc13)','VOC14_AWB->voc14(emi_voc14)',
+			'VOC15_AWB->voc15(emi_voc15)','VOC16_AWB->voc16(emi_voc16)',
+			'VOC17_AWB->voc17(emi_voc17)',
+			'VOC19_AWB->voc19(emi_voc19)',
+			'VOC21_AWB->voc21(emi_voc21)','VOC22_AWB->voc22(emi_voc22)',
+			'VOC23_AWB->voc23(emi_voc23)',
+			'VOC25_AWB->voc25(emi_voc25)',
+/

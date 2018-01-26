@@ -1,0 +1,59 @@
+
+&CONTROL
+ anthro_dir = './input_data/%%BB%%'
+ wrf_dir = './'
+ src_file_prefix = 'v432_VOC_spec_'
+ domains = 4
+ src_file_suffix = '_2010_%%AA%%_IPCC_1A1b_1B2a5.0.1x0.1.nc' 
+ src_names = 
+ 		'voc1(1)','voc2(1)','voc3(1)','voc4(1)','voc5(1)',
+ 		'voc6(1)','voc7(1)','voc8(1)','voc9(1)','voc10(1)',
+ 		'voc12(1)','voc13(1)','voc14(1)','voc15(1)',
+ 		'voc16(1)','voc17(1)','voc23(1)','voc25(1)',
+
+
+ 
+ sub_categories  = 'emi_voc1',
+                   'emi_voc2',
+                   'emi_voc3',
+                   'emi_voc4',
+                   'emi_voc5',
+                   'emi_voc6',
+                   'emi_voc7',
+                   'emi_voc8',
+                   'emi_voc9',
+                   'emi_voc10',
+                   'emi_voc11',
+                   'emi_voc12',
+                   'emi_voc13',
+                   'emi_voc14',
+                   'emi_voc15',
+                   'emi_voc16',
+                   'emi_voc17',
+                   'emi_voc18',
+                   'emi_voc19',
+                   'emi_voc20',
+                   'emi_voc21',
+                   'emi_voc22',
+                   'emi_voc23',
+                   'emi_voc24',
+                   'emi_voc25',
+
+ cat_var_prefix  = ' '
+ serial_output   = .false.
+ start_output_time = '2015-07-10_00:00:00'
+ stop_output_time = '2015-07-14_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'VOC01_REF->voc1(emi_voc1)','VOC02_REF->voc2(emi_voc2)',
+			'VOC03_REF->voc3(emi_voc3)','VOC04_REF->voc4(emi_voc4)',
+			'VOC05_REF->voc5(emi_voc5)','VOC06_REF->voc6(emi_voc6)',
+			'VOC07_REF->voc7(emi_voc7)','VOC08_REF->voc8(emi_voc8)',
+			'VOC09_REF->voc9(emi_voc9)','VOC10_REF->voc10(emi_voc10)',
+			'VOC12_REF->voc12(emi_voc12)',
+			'VOC13_REF->voc13(emi_voc13)','VOC14_REF->voc14(emi_voc14)',
+			'VOC15_REF->voc15(emi_voc15)','VOC16_REF->voc16(emi_voc16)',
+			'VOC17_REF->voc17(emi_voc17)',
+			'VOC23_REF->voc23(emi_voc23)',
+			'VOC25_REF->voc25(emi_voc25)',
+/
