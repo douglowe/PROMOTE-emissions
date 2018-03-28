@@ -6,7 +6,7 @@
  domains = 4
  src_file_suffix = '_2015.nc' 
  src_names = 
- 		'CO(28)','NOX(30)','SO2(64)','NMVOC(1)','BC(1)','OC(1)','PM2_5(1)','PM10(1)'
+ 		'CO(28)','NOX(30)','SO2(64)','NMVOC(1)','BC(1)','OC(1)','PM2_5(1)','PM10(1)','SCALE(1)'
 
  ! Note NMVOC is set to mol weight of 1 - > will give emissions in "g"/km^2/hr.
  ! When splitting into subspecies, must divide by molecular weight to give mol emissions.
@@ -15,7 +15,8 @@
                    'pow',
                    'res',
                    'tra',
-                   'wbd'
+                   'wbd',
+                   'scale'
 
  cat_var_prefix  = ' '
  serial_output   = .false.
@@ -23,7 +24,9 @@
  stop_output_time = '2015-07-14_00:00:00'
  data_yrs_offset = +0
  emissions_zdim_stag = 1
- emis_map = 'CO_ANT_TRA->CO(tra)','CO_ANT_IND->CO(ind)','CO_ANT_RES->CO(res)','CO_ANT_POW->CO(pow)',
+ emis_map = 'SCALE(a)->SCALE(scale)',
+            
+            'CO_ANT_TRA->CO(tra)','CO_ANT_IND->CO(ind)','CO_ANT_RES->CO(res)','CO_ANT_POW->CO(pow)',
  
             'NOx_ANT_TRA->NOX(tra)','NOx_ANT_IND->NOX(ind)','NOx_ANT_RES->NOX(res)','NOx_ANT_POW->NOX(pow)',
             
@@ -38,6 +41,17 @@
             'OC_ANT_WBD(a)->OC(wbd)',
             
             'NH3_ANT_AGR-> 0.0*CO(tra)',
+            'NH3_ANT_TRA-> 0.0*CO(tra)',
+            'NH3_ANT_IND-> 0.0*CO(tra)',
+            'NH3_ANT_RES-> 0.0*CO(tra)',
+            
+            'CO_ANT_SHP-> 0.0*CO(tra)',
+            'NOx_ANT_SHP-> 0.0*CO(tra)',
+            'SO2_ANT_SHP-> 0.0*CO(tra)',
+            'NMVOC_ANT_SHP-> 0.0*CO(tra)',
+            'BC_ANT_SHP-> 0.0*CO(tra)',
+            'PM2_5_ANT_SHP-> 0.0*CO(tra)',
+            'PM10_ANT_SHP-> 0.0*CO(tra)',
             
              'PM2_5_ANT_TRA(a)->PM2_5(tra)',
              'PM2_5_ANT_IND(a)->PM2_5(ind)',
