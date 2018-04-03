@@ -120,6 +120,10 @@ lat_temp = create_latlon_array(entire_data_table,1)
 lon_output = increase_latlon_array_byone(lon_temp)
 lat_output = increase_latlon_array_byone(lat_temp)
 
+;;; calculate the latitude and longitude values for the centre of the grid cells (assuming monotonic increases in these)
+lon_centre_output = derive_centre_values_from_lower_values(lon_output)
+lat_centre_output = derive_centre_values_from_lower_values(lat_output)
+
 ;;; determine the number of longitude and latitude data points
 nlon = dimsizes(lon_output)
 nlat = dimsizes(lat_output)
@@ -150,7 +154,7 @@ do vari = 0, dimsizes(output_var_names)-1
 	print("== Creating the output file ==")
 	filename = output_head+output_var_names(vari)+output_tail
 	;;; create the netcdf file, and dimensions, global attributes, and latitude & longitude data
-	OUTFILE = netcdf_file_create(output_path,filename,nlat,nlon,lat_output,lon_output,output_sectors)
+	OUTFILE = netcdf_file_create(output_path,filename,nlat,nlon,lat_centre_output,lon_centre_output,output_sectors)
 
 
 	;;; save data in netcdf file

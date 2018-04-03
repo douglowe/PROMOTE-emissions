@@ -129,6 +129,31 @@ end
 
 
 ;
+;  Function for calculating the centre position of a grid cell, from the lower edge value provided
+;     assuming that the array spacing is monotic
+;
+undef("derive_centre_values_from_lower_values")
+function derive_centre_values_from_lower_values(array_temp:numeric)
+local array_output, narray
+begin
+
+	;;; create output array
+	array_output = new(dimsizes(array_temp),typeof(array_temp),-9999.)
+
+	;;; determine the number of data points
+	narray = dimsizes(array_output)
+
+	;;; for most of the array we simply take the geometric average of the lower/upper boundaries
+	array_output(0:narray-2) = (array_temp(0:narray-2)+array_temp(1:narray-1))/2.0
+	;;; for the final grid cell we will assume monoticity, and take add half the width of the previous gridcell
+	array_output(narray-1) = array_temp(narray-1) + (array_temp(narray-1)-array_temp(narray-2))/2.0
+
+	return(array_output)
+
+end
+
+
+;
 ;  Function for creating a 3-D array of sector on the lat / lon grid
 ;
 ;  input: entire_data_table (nsecs,nrows,ncols)
