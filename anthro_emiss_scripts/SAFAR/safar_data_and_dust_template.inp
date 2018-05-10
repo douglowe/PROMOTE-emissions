@@ -4,7 +4,7 @@
  wrf_dir = './'
  src_file_prefix = 'SAFAR_'
  domains = 4
- src_file_suffix = '_2015.nc' 
+ src_file_suffix = '_%%AA%%_2015.nc' 
  src_names = 
  		'CO(28)','NOX(30)','SO2(64)','NMVOC(1)','BC(1)','OC(1)','PM2_5(1)','PM10(1)','SCALE(1)'
 
@@ -50,6 +50,7 @@
             'SO2_ANT_SHP-> 0.0*CO(tra)',
             'NMVOC_ANT_SHP-> 0.0*CO(tra)',
             'BC_ANT_SHP-> 0.0*CO(tra)',
+            'OC_ANT_SHP-> 0.0*CO(tra)',
             'PM2_5_ANT_SHP-> 0.0*CO(tra)',
             'PM10_ANT_SHP-> 0.0*CO(tra)',
             

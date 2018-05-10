@@ -1,0 +1,625 @@
+input_data
+|-- annual
+|   |-- edgar_HTAP_BC_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_BC_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_BC_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_CO_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_CO_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_CO_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NH3_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NOx_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_OC_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_OC_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_OC_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM10_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_SO2_emi_ENERGY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_SO2_emi_TRANSPORT_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_BC_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_BC_AIR_CRS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_BC_AIR_LTO_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_CO_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_CO_AIR_CRS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_CO_AIR_LTO_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_NMVOC_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_NMVOC_AIR_CRS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_NMVOC_AIR_LTO_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_NOx_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_NOx_AIR_CRS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_NOx_AIR_LTO_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_OC_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_OC_AIR_CRS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_OC_AIR_LTO_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_PM10_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_PM10_AIR_CRS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_PM10_AIR_LTO_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_PM2.5_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_PM2.5_AIR_CRS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_PM2.5_AIR_LTO_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_SO2_AIR_CDS_2010.0.1x0.1.nc
+|   |-- edgar_HTAP_emi_SO2_AIR_CRS_2010.0.1x0.1.nc
+|   `-- edgar_HTAP_emi_SO2_AIR_LTO_2010.0.1x0.1.nc
+`-- monthly
+    |-- 01
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_1.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_1.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_1.0.1x0.1.nc
+    |-- 02
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_2.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_2.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_2.0.1x0.1.nc
+    |-- 03
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_3.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_3.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_3.0.1x0.1.nc
+    |-- 04
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_4.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_4.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_4.0.1x0.1.nc
+    |-- 05
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_5.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_5.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_5.0.1x0.1.nc
+    |-- 06
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_6.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_6.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_6.0.1x0.1.nc
+    |-- 07
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_7.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_7.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_7.0.1x0.1.nc
+    |-- 08
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_8.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_8.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_8.0.1x0.1.nc
+    |-- 09
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_9.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_9.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_9.0.1x0.1.nc
+    |-- 10
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_10.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_10.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_10.0.1x0.1.nc
+    |-- 11
+    |   |-- edgar_HTAP_BC_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_BC_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_CO_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_OC_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+    |   |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_ENERGY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_11.0.1x0.1.nc
+    |   |-- edgar_HTAP_SO2_emi_SHIPS_2010_11.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+    |   `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_11.0.1x0.1.nc
+    `-- 12
+        |-- edgar_HTAP_BC_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_BC_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_BC_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_BC_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_BC_emi_SHIPS_2010.0.1x0.1.nc
+        |-- edgar_HTAP_BC_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_CO_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_CO_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_CO_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_CO_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_CO_emi_SHIPS_2010.0.1x0.1.nc
+        |-- edgar_HTAP_CO_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NH3_emi_AGRICULTURE_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NH3_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NH3_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NH3_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NH3_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NMVOC_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NMVOC_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NMVOC_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NMVOC_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_NMVOC_emi_SHIPS_2010.0.1x0.1.nc
+        |-- edgar_HTAP_NMVOC_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NOx_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NOx_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NOx_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_NOx_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_NOx_emi_SHIPS_2010.0.1x0.1.nc
+        |-- edgar_HTAP_NOx_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_OC_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_OC_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_OC_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_OC_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_OC_emi_SHIPS_2010.0.1x0.1.nc
+        |-- edgar_HTAP_OC_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM10_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM10_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM10_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM10_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM10_emi_SHIPS_2010.0.1x0.1.nc
+        |-- edgar_HTAP_PM10_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM2.5_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM2.5_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM2.5_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_PM2.5_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_PM2.5_emi_SHIPS_2010.0.1x0.1.nc
+        |-- edgar_HTAP_PM2.5_emi_TRANSPORT_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_SO2_emi_ENERGY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_SO2_emi_INDUSTRY_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_SO2_emi_RESIDENTIAL_2010_12.0.1x0.1.nc
+        |-- edgar_HTAP_SO2_emi_SHIPS_2010_12.0.1x0.1.nc -> ../../annual/edgar_HTAP_SO2_emi_SHIPS_2010.0.1x0.1.nc
+        `-- edgar_HTAP_SO2_emi_TRANSPORT_2010_12.0.1x0.1.nc
+ 
