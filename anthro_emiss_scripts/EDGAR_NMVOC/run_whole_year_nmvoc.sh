@@ -15,6 +15,8 @@ sectors=( 'AWB' 'ENE' 'FFF' 'IND' 'PPA' 'PRO' \
 			'RCO' 'REF' 'SWD' 'TNR_Other' 'TNR_Ship' \
 			'TRF' 'TRO' 'TNR_AV_CDS' 'TNR_AV_CRS' 'TNR_AV_LTO' )
 
+nmext='NMVOC_EDGAR'
+
 
 
 for ii in {1..12};do
@@ -41,8 +43,8 @@ for ii in {1..12};do
 		# append the variables we need to the final output files
 		#    (this will create the final output files if they do not exist already)
 		for jj in {1..4};do
-			ncks -A wrfchemi_00z_d0${jj} wrfchemi_00z_d0${jj}_${year}_${rep}
-			ncks -A wrfchemi_12z_d0${jj} wrfchemi_12z_d0${jj}_${year}_${rep}
+			ncks -A wrfchemi_00z_d0${jj} wrfchemi_00z_${nmext}_d0${jj}_${year}_${rep}
+			ncks -A wrfchemi_12z_d0${jj} wrfchemi_12z_${nmext}_d0${jj}_${year}_${rep}
 			rm wrfchemi_00z_d0${jj} wrfchemi_12z_d0${jj}
 		done		
 		
