@@ -166,7 +166,7 @@ do moni = 0,dimsizes(months)-1
 	nlat := dimsizes(lat_output)
 
 
-	;;; create grid of conversion factors, from Ton/Yr/grid to kg/m2/s    ;;;;;;;; CHECK THAT THIS IS THE UNITS OF YOUR DATA
+	;;; create grid of conversion factors, from Ton/Month/grid to kg/m2/s    ;;;;;;;; CHECK THAT THIS IS THE UNITS OF YOUR DATA
 	convert_grid := conversion_tmonthgrid_to_kgm2s_calc(lon_output,lat_output,months@$months(moni)$,year)
 	;convert_grid := conversion_tyrgrid_to_kgm2s_calc(lon_output,lat_output)
 	;convert_grid := conversion_Ggyrgrid_to_kgm2s_calc(lon_output,lat_output)

@@ -1,5 +1,5 @@
 ;
-;  Program for converting creating a scaling factor netcdf file for TROPMET
+;  Program for converting creating a scaling factor netcdf file for SAFAR
 ;
 ;  Run this after you have run the MAIN_SAFAR_2015_convert_csv_to_netcdf.ncl script
 ;
