@@ -40,6 +40,10 @@ scale = (/FILE->E_SCALE/)
 ;; convert back to a 0-1 scale
 scale = scale / 1e9
 
+;; tidy up the scaling factor, to get rid of small errors caused by
+;;   machine accuracy
+scale = decimalPlaces(scale,4,True)
+
 
 ;; loop through the list of variables, only modifying the emissions that exist in both files
 do mm = 0, dimsizes(var_list)-1
