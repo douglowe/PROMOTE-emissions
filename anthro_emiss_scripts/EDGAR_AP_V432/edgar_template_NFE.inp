@@ -1,0 +1,32 @@
+
+&CONTROL
+ anthro_dir = './input_data/%%BB%%'
+ wrf_dir = './'
+ src_file_prefix = 'v432_'
+ domains = 4
+ src_file_suffix = '_2010_%%AA%%_IPCC_2C3_2C4_2C5.0.1x0.1.nc' 
+ src_names = 
+ 		'CO(28)','NOx(30)','SO2(64)','BC(1)','PM2.5_fossil(1)','PM10(1)'
+
+ 
+ sub_categories  = 'emi_co',
+                   'emi_nox',
+                   'emi_so2',
+                   'emi_bc',
+                   'emi_pm2.5',
+                   'emi_pm10',
+
+ cat_var_prefix  = ' '
+ serial_output   = .false.
+ start_output_time = '2015-07-10_00:00:00'
+ stop_output_time = '2015-07-14_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'CO_ANT_NFE->CO(emi_co)',
+            'NOx_ANT_NFE->NOx(emi_nox)',
+            'SO2_ANT_NFE->SO2(emi_so2)',
+            'BC_ANT_NFE(a)->BC(emi_bc)',
+            'PM2_5_ANT_NFE(a)->PM2.5_fossil(emi_pm2.5)',
+            'PM10_ANT_NFE(a)->PM10(emi_pm10)',
+
+/

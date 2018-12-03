@@ -1,0 +1,28 @@
+
+&CONTROL
+ anthro_dir = './input_data/%%BB%%'
+ wrf_dir = './'
+ src_file_prefix = 'v432_'
+ domains = 4
+ src_file_suffix = '_2010_%%AA%%_IPCC_3.0.1x0.1.nc' 
+ src_names = 
+ 		'NH3(17)','NMVOC(1)','PM2.5_fossil(1)','PM10(1)'
+
+ 
+ sub_categories  = 'emi_nh3',
+                   'emi_nmvoc',
+                   'emi_pm2.5',
+                   'emi_pm10',
+                   
+ cat_var_prefix  = ' '
+ serial_output   = .false.
+ start_output_time = '2015-07-10_00:00:00'
+ stop_output_time = '2015-07-14_00:00:00'
+ data_yrs_offset = +0
+ emissions_zdim_stag = 1
+ emis_map = 'NMVOC_ANT_PRU_SOL->NMVOC(emi_nmvoc)',
+            'NH3_ANT_PRU_SOL->NH3(emi_nh3)',
+            'PM2_5_ANT_PRU_SOL(a)->PM2.5_fossil(emi_pm2.5)',
+            'PM10_ANT_PRU_SOL(a)->PM10(emi_pm10)',
+            
+/
