@@ -43,6 +43,36 @@
 ;        35) OC   Transport
 ;        36) OC   Residential
 ;
+
+;  organisation of the factorOTHER data files
+;		 0) ID
+;		 1) LAT
+;		 2) LONG
+;		 3) PM25_Sum
+;		 4) PM25_Other
+;		 5) PM25_factor
+;		 6) PM10_Sum
+;		 7) PM10_Other
+;		 8) PM10_factor
+;		 9) CO_Sum
+;		10) CO_Other
+;		11) CO_factor
+;		12) NOX_Sum
+;		13) NOX_Other
+;		14) NOX_factor
+;		15) BC_Sum
+;		16) BC_Other
+;		17) BC_factor
+;		18) SO2_Sum
+;		19) SO2_Other
+;		20) SO2_factor
+;		21) VOC_Sum
+;		22) VOC_Other
+;		23) VOC_factor
+;		24) OC_Sum
+;		25) OC_Other
+;		26) OC_factor
+
 ;;;;;;;;;;;;;;;; Is this still true?
 ;;;;;;  Input Latitude and Longitude are for lower left corner of the grid cell
 ;;;;;;  Emissions are in (metric?) tonnes per month per grid cell
@@ -74,19 +104,21 @@ load "./emission_conversion_routines.ncl"
 begin
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;; Configuration Information ;;;;;;;;;;;;;;;;;;;;;;;
-input_path       = "/nerc/n02/n02/lowe/emissions_files/input_data/SAFAR/generate_emission_netcdfs/source_data/2015_seasonal_emission_data/"
-input_file_front = "gridded_delhi_emission_monthly_2015_V4_"
+input_path       = "/nerc/n02/n02/lowe/emissions_files/input_data/SAFAR/generate_emission_netcdfs/source_data/2018_seasonal_emission_data/"
+input_file_front = "gridded_delhi_emission_monthly_2018_YingCHEN_"
 input_file_tail  = ".csv"
+
+input_file_front_other = "gridded_delhi_emission_monthly_2018_YingCHEN_factorOTHER_"
 
 
 months = (/"January","February","March","April","May","June",\
 			"July","August","September","October","November","December"/)
-year   = 2015
+year   = 2018
 
-input_sectors = (/"IND","POW","RESI","TRAN","WBD"/) ;;; make sure these match the input file headers!
-output_sectors = (/"ind","pow","res","tra","wbd"/)  ; has to be same order as input_sectors!!!!!
+input_sectors = (/"IND","POW","RESI","TRAN","WBD","Other"/) ;;; make sure these match the input file headers!
+output_sectors = (/"ind","pow","res","tra","wbd","other"/)  ; has to be same order as input_sectors!!!!!
 
-output_path = "/nerc/n02/n02/lowe/emissions_files/input_data/SAFAR/generate_emission_netcdfs/2015_processed_data/"
+output_path = "/nerc/n02/n02/lowe/emissions_files/input_data/SAFAR/generate_emission_netcdfs/2018_processed_data_with_other/"
 output_head = "SAFAR_"
 ;output_tail = "_12_2015.nc"
 output_tail = ".nc"
@@ -140,6 +172,20 @@ do moni = 0,dimsizes(months)-1
 	;;;      				- it will only work if all input files are the same size!
 	entire_data_table := read_all_input_data(ncols,nsecs,input_path,input_file,input_sectors,input_var_names)
 	;;; 1st column is longitude, 2nd column is latitude, 3rd+ are variables
+
+
+	print("== Reading 'other' input data ==")
+	;; create the input file name
+	input_file := input_file_front_other + months(moni) + "_" + tostring(year) + input_file_tail
+
+	;;; load "other" data from input files - this will be 3 dimensional (nsectors, nrows, ncols)
+	;;;      				- it will only work if all input files are the same size!
+	entire_data_table_other := read_all_input_data(ncols,nsecs,input_path,input_file,input_sectors,input_var_names)
+	;;; 1st column is longitude, 2nd column is latitude, 3rd+ are variables
+
+
+	print("== Combining standard and 'other' input data")
+	entire_data_table = where(entire_data_table.ne.0.0,entire_data_table,entire_data_table_other)
 
 
 	;;; determine number of rows
